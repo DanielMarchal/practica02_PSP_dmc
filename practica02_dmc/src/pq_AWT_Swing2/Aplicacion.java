@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import javax.swing.*;
 
 public class Aplicacion extends JFrame{
@@ -58,6 +60,24 @@ public class Aplicacion extends JFrame{
         panelBotones.add(siguienteBoton);
         
         getContentPane().add(panelBotones, BorderLayout.SOUTH);
+
+        siguienteBoton.addActionListener(new ActionListener() {
+            
+            public void actionPerformed(ActionEvent e){
+                posicion++;
+                mostrarCliente(numeroField, nombreField, edadField, puntosField);
+            }
+            
+        });
+        
+        anteriorBoton.addActionListener(new ActionListener() {
+            
+            public void actionPerformed(ActionEvent e){
+                posicion--;
+                mostrarCliente(numeroField, nombreField, edadField, puntosField);
+            }
+        
+        });
     
     }
     
