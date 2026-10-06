@@ -1,4 +1,6 @@
-package pq_AWT_Swing2;
+package vista;
+
+import modelo.Cliente;
 
 import java.util.ArrayList;
 import javax.swing.JButton;

@@ -1,4 +1,4 @@
-package pq_AWT_Swing2;
+package modelo;
 
 public class Cliente {
     private int numero;
