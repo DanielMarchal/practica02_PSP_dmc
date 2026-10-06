@@ -67,7 +67,11 @@ public class Aplicacion extends JFrame{
             
             public void actionPerformed(ActionEvent e){
                 posicion++;
-                mostrarCliente(numeroField, nombreField, edadField, puntosField);
+                if(posicion > miLista.size() - 1){
+                    System.out.println("No hay mas clientes");
+                }else{
+                    mostrarCliente(numeroField, nombreField, edadField, puntosField);
+                }
             }
             
         });
@@ -76,7 +80,11 @@ public class Aplicacion extends JFrame{
             
             public void actionPerformed(ActionEvent e){
                 posicion--;
-                mostrarCliente(numeroField, nombreField, edadField, puntosField);
+                if(posicion < 0){
+                    System.out.println("No hay mas clientes");
+                } else{
+                    mostrarCliente(numeroField, nombreField, edadField, puntosField);
+                }
             }
         
         });
